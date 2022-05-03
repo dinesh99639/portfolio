@@ -17,51 +17,6 @@ const terminalDefaultValue = `
 8   }
 `;
 
-function Feature(props) {
-  const { theme, title, description, Icon } = props
-  return (<Grid item xs={3} sx={{ padding: "10px", display: "flex", justifyContent: "center" }} >
-    <Paper
-      elevation={2}
-      sx={{
-        width: "100%",
-        maxWidth: "280px",
-        height: "250px",
-        borderRadius: "5px",
-        backgroundColor: (theme === "dark") ? darkTheme.backgroundColor : lightTheme.backgroundColor,
-        color: "inherit",
-        padding: "10px 5px"
-      }}
-    >
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100px"
-        }}
-      >
-        <Box
-          sx={{
-            backgroundColor: "#1c88f4c9",
-            borderRadius: "50%",
-            padding: "25px"
-          }}
-        >
-          <Icon style={{ fontSize: "40px", color: "white" }} />
-        </Box>
-      </Box>
-      <Typography
-        sx={{
-          textAlign: "center",
-          marginTop: "10px",
-          fontWeight: "bold"
-        }}
-      >{title}</Typography>
-      <Typography sx={{ padding: "5px 10px", fontSize: "14px", textAlign: "center" }} >{description}</Typography>
-    </Paper>
-  </Grid>);
-}
-
 function Home(props) {
   const isDesktop = window.innerWidth > 760;
   const { theme } = props;
