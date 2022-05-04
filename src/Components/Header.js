@@ -13,7 +13,7 @@ const Header = (props) => {
             <Typography
               variant="h6"
               component="div"
-            >Dinesh Somaraju</Typography>
+            >Portfolio</Typography>
           </Box>
 
           <Box style={{ display: "flex", alignItems: "center" }}>
