@@ -17,6 +17,23 @@ const terminalDefaultValue = `
 8   }
 `;
 
+const skills = [
+  { label: "HTML", img: "/assets/skills/html5.svg" },
+  { label: "CSS", img: "/assets/skills/css3.svg" },
+  { label: "JavaScript", img: "/assets/skills/javascript.svg" },
+  { label: "jQuery", img: "/assets/skills/jquery.svg" },
+  { label: "BootStrap", img: "/assets/skills/bootstrap.svg" },
+  { label: "php", img: "/assets/skills/php.svg" },
+  { label: "MySQL", img: "/assets/skills/mysql.svg" },
+  { label: "NodeJS", img: "/assets/skills/nodejs.svg" },
+  { label: "React", img: "/assets/skills/react.svg" },
+  { label: "ExpressJS", img: "/assets/skills/expressjs.svg" },
+  { label: "MongoDB", img: "/assets/skills/mongodb.svg" },
+  { label: "Java", img: "/assets/skills/java.svg" },
+  { label: "Python", img: "/assets/skills/python.svg" },
+  { label: "Git", img: "/assets/skills/git.svg" },
+]
+
 function Home(props) {
   const isDesktop = window.innerWidth > 760;
   const { theme } = props;
@@ -125,6 +142,29 @@ function Home(props) {
             </Box>
           </Grid>
         </Grid>
+
+        <Box>
+          <Typography sx={{ textAlign: "center", fontSize: "18px", margin: "15px 0 0 0" }} >Skills</Typography>
+          <Grid container sx={{ padding: "0 10px", display: "flex", justifyContent: "center", alignItems: "center" }} >
+            {
+              skills.map((skill, index) => {
+                return <div key={"skill" + index}>
+                  <img
+                    alt={skill.label}
+                    src={skill.img}
+                    style={{
+                      width: "60px",
+                      margin: "10px 30px",
+                      filter: (theme === "dark") ? 
+                        "brightness(0%) invert(100%)" : 
+                        "grayscale(100%)",
+                    }}
+                  />
+                </div>
+              })
+            }
+          </Grid>
+        </Box>
 
         <Box sx={{ padding: "20px 0" }} ></Box>
       </Box>
