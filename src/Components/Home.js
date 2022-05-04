@@ -158,6 +158,7 @@ function Home(props) {
                       filter: (theme === "dark") ? 
                         "brightness(0%) invert(100%)" : 
                         "grayscale(100%)",
+                      opacity: "0.76"
                     }}
                   />
                 </div>
