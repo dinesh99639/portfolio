@@ -8,7 +8,7 @@ const Header = (props) => {
   return (
     <Box>
       <AppBar position="static" className="main-header" >
-        <Toolbar style={{ height: "7vh" }} >
+        <Toolbar style={{ height: "7vh", minHeight: "7vh" }} >
           <Box style={{ marginRight: "auto", display: "flex" }}>
             <Typography
               variant="h6"
